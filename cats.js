@@ -459,6 +459,8 @@ _.render = function(target, pos, vdom){
     if(shortPos[pos]) pos = shortPos[pos];
 
     if(!Array.isArray(vdom)) vdom = [vdom];
+	
+    vdom = flatten(vdom);
     
     for(let v of vdom) {
         if(v.isVDOM){
