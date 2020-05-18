@@ -236,7 +236,6 @@ function diffele(oldv, newv){
             newv.runf('Unmounted');
             delete newv.simpleItem;
             fuseObj(newv, oldv);
-            // if(newv.id) uinfo.items[newv.id] = newv;
         }
         else if (oldv.isVDOM && newv.isVDOM) {
             if(newv.isItem && !newv.inited) newv.init();
